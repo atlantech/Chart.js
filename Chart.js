@@ -2491,7 +2491,7 @@
 						//Transition then draw
 						bar.transition({
 							x : this.scale.calculateBarX(this.datasets.length, datasetIndex, index),
-							y : this.scale.calculateY(bar.value),
+							y : Math.floor(this.scale.calculateY(bar.value)),
 							width : this.scale.calculateBarWidth(this.datasets.length)
 						}, easingDecimal).draw();
 					}
